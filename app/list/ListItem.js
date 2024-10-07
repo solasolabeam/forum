@@ -13,17 +13,21 @@ export default function ListItem({ result }) {
                                 <h4>{v.title}</h4>
                             </Link>
                             <Link href={`/edit/${v._id}`}>✏️</Link>
-                            <span onClick={() => {
-                                fetch('/api/post/delete', {
-                                    method : 'DELETE',
-                                    body: v._id
-                                })
-                                .then((r)=>{
-                                    return r.json()
-                                })
-                                .then((r)=>{
-                                    console.log(r)
-                                })
+                            <span onClick={(e) => {
+                                // fetch('/api/post/delete', {
+                                //     method : 'DELETE',
+                                //     body: v._id
+                                // })
+                                // .then((r)=>{
+                                //     return r.json()
+                                // })
+                                // .then(()=>{
+                                //     e.target.parentElement.style.opacity = 0
+                                //     setTimeout(()=>{
+                                //         e.target.parentElement.style.display = 'none'
+                                //     },1000)
+                                // })
+                                fetch('/api/abc/123123')
                             }}>🗑️</span>
                             {/* <DetailLink /> */}
                             <p>1월 1일</p>
