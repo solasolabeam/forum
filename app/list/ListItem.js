@@ -14,13 +14,16 @@ export default function ListItem({ result }) {
                             </Link>
                             <Link href={`/edit/${v._id}`}>✏️</Link>
                             <span onClick={() => {
-                                fetch('/api/test', {
-                                    method : 'POST',
-                                    body: JSON.stringify([1,2,3])
+                                fetch('/api/post/delete', {
+                                    method : 'DELETE',
+                                    body: v._id
                                 })
-                                    .then(() => {
-                                        console.log(123123)
-                                    })
+                                .then((r)=>{
+                                    return r.json()
+                                })
+                                .then((r)=>{
+                                    console.log(r)
+                                })
                             }}>🗑️</span>
                             {/* <DetailLink /> */}
                             <p>1월 1일</p>
