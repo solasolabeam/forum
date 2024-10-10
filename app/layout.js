@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
 import LoginBtn from "./LoginBtn";
-import LogOutBtn from "./LogoutBtn";
+import LogOutBtn from "./LogOutBtn";
 import DarkMode from "./DarkMode";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";

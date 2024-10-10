@@ -10,7 +10,6 @@ export async function middleware(request) {
     // NextResponse.rewrite()
 
     const session = await getToken({ req: request })
-    console.log('session', session)
 
     // if(request.nextUrl.pathname === '/list') {
     //     console.log(request.headers.get('sec-ch-ua-platform'))
